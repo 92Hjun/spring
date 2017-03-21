@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- ibatis 연동 -->
+	<!-- connectionPoll 생성 -->
+	<bean id="connectionPool" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://localhost:3306/my_db"/>
+		<property name="username" value="myuser"/>
+		<property name="password" value="zxcv1234"/>
+	</bean>
+	
+	<!-- ibatis 핵심객체 sqlMapClient 등록 속성으로는 dataSource configLocation이 있다. (connectionPool)-->
+	<bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+		<property name="dataSource" ref="connectionPool"/>
+		<property name="configLocation" value="classpath:/META-INF/ibatis/SqlMapConfig.xml"/>
+	</bean>
+	
+	<!-- sqlMapClientTemplate 등록 속성으로는 sqlMapClient 를 지정하면 된다. (connectionPool, sqlMapConfig.xml)-->
+	<bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">
+		<property name="sqlMapClient" ref="sqlMapClient"/>
+	</bean>
+	
+	<!-- bookDAO에 sqlMapClientTemplate 등록 (setter메소드가 있어야함) (sqlMapClient)-->
+	<bean id="bookDAOImpl" class="kr.co.jhta.dao.BookDAOImpl">
+		<property name="template" ref="sqlMapClientTemplate"/>
+	</bean>
+	
+	<!-- bookServiceImpl이 필요한 bookDAOImpl을 등록 (sqlMapClientTemplate)-->
+	<bean id="bookServiceImpl" class="kr.co.jhta.service.BookServiceImpl">
+		<property name="bookDAO" ref="bookDAOImpl"/>
+	</bean>
+	
+	<!-- *.hta에서 사용할 bookService를 등록 (bookDAO)-->
+	<bean name="/home.hta" class="kr.co.jhta.controller.HomeController">
+		<property name="bookService" ref="bookServiceImpl"/>
+	</bean>
+	<bean name="/list.hta" class="kr.co.jhta.controller.ListController">
+		<property name="bookService" ref="bookServiceImpl"/>
+	</bean>
+	
+	<bean name="/addForm.hta" class="kr.co.jhta.controller.AddFormController"></bean>
+	
+	<bean name="/add.hta" class="kr.co.jhta.controller.AddController">
+		<property name="bookService" ref="bookServiceImpl"/>
+	</bean>
+	
+	<bean name="/searchForm.hta" class="kr.co.jhta.controller.SearchFormController"></bean>
+	
+	<bean name="/search.hta" class="kr.co.jhta.controller.SearchController">
+		<property name="bookService" ref="bookServiceImpl"/>
+	</bean>
+	
+
+</beans>

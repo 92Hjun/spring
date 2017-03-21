@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="book">
+	
+	<typeAlias alias="Book" type="kr.co.jhta.vo.Book"/>
+	
+	<insert id="abbBook" parameterClass="Book">
+		insert into tb_books 
+			(title, author, publisher, price, description, regdate)
+		values
+			(#title#,#author#,#publisher#,#price#,#description#,now())
+	</insert>
+	
+	<select id="getAllBook" resultClass="Book">
+		select
+			id,title,author,publisher,price,description,regdate
+		from
+			tb_books
+		order by
+			id desc	
+	</select>
+	
+	<select id="searchBooks" resultClass="Book" parameterClass="Book">
+		select
+			id,title,author,publisher,price,description,regdate
+		from
+			tb_books
+		where
+			1=1
+			<dynamic>
+				<isNotNull property="title">
+					and title like '%'|| #title# || '%'
+				</isNotNull>
+				<isNotNull property="author">
+					and author = #author#
+				</isNotNull>
+				<isNotNull property="publisher">
+					and publisher = #publisher#
+				</isNotNull>
+			</dynamic>
+	</select>
+	
+</sqlMap>
