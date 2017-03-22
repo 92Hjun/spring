@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="user">
+	
+	<typeAlias alias="User" type="kr.co.jhta.todo.vo.User"/>
+	
+	<insert id="addUser" parameterClass="User">
+		insert into tb_user(id, pwd, name, phone, email, complted_todo, uncomplted_todo, regdate)
+		values(#id#, #pwd#, #name#, #phone#, #email#, 0, 0, now());
+	</insert>
+	
+	<select id="getUserById" parameterClass="String" resultClass="User">
+		select 
+			no,
+			id,
+			pwd,
+			name,
+			phone,
+			email,
+			complted_todo,
+			uncomplted_todo,
+			regdate
+		from
+			tb_user
+		where
+			id = #value#
+	</select>
+	
+</sqlMap>
