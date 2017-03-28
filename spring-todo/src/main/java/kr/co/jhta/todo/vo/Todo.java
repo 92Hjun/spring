@@ -1,6 +1,6 @@
 package kr.co.jhta.todo.vo;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Todo {
 	private int no;
@@ -9,18 +9,38 @@ public class Todo {
 	private String description;
 	private String completed;
 	private User user;
+	private String mapFilename;
+	private String attachFilename;
 	private Date regdate;
 
 	public Todo(){}
 	
-	public Todo(int no, String title, Date eventDate, String description, String completed, User user, Date regdate) {
+	public Todo(int no, String title, Date eventDate,String mapFilename, String attachFilename, String description, String completed, User user, Date regdate) {
+		this.attachFilename = attachFilename;
 		this.no = no;
+		this.mapFilename = mapFilename;
 		this.title = title;
 		this.eventDate = eventDate;
 		this.description = description;
 		this.completed = completed;
 		this.user = user;
 		this.regdate = regdate;
+	}
+
+	public String getAttachFilename() {
+		return attachFilename;
+	}
+
+	public void setAttachFilename(String attachFilename) {
+		this.attachFilename = attachFilename;
+	}
+
+	public String getMapFilename() {
+		return mapFilename;
+	}
+
+	public void setMapFilename(String mapFilename) {
+		this.mapFilename = mapFilename;
 	}
 
 	public int getNo() {

@@ -5,7 +5,7 @@
 <sqlMapConfig>
 	
   <!--	맵퍼파일 등록 여러가지가 등록될수 있다.	-->
-  <sqlMap resource="META-INF/ibatis/mappers/todo.xml"/>
-  <sqlMap resource="META-INF/ibatis/mappers/user.xml"/>
+  <sqlMap resource="META-INF/db/mybatis/mappers/todo.xml"/>
+  <sqlMap resource="META-INF/db/mybatis/mappers/user.xml"/>
  	
 </sqlMapConfig>

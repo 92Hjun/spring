@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -22,12 +21,6 @@ public class UserController {
 	
 	@Autowired
 	private UserService userService;
-	
-	@ExceptionHandler(RuntimeException.class)
-	public String runtimeExceptionHanDler(RuntimeException ex){
-		
-		return "error/server.error";
-	}
 	
 	@RequestMapping(value="/register.do",method=RequestMethod.GET)
 	public String form(Model model){
@@ -70,6 +63,7 @@ public class UserController {
 		
 		return "loginform";
 	}
+	
 	@RequestMapping(value="/login.do", method=RequestMethod.POST)
 	public String login(String id, String pwd, HttpSession session){
 		

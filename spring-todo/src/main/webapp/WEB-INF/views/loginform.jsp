@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Login</title>
+<title>Todo - Login</title>
 </head>
 <body>
 	<div class="container">
@@ -18,6 +18,11 @@
 			<c:if test="${param.error eq 'invalid'}">
 				<div class="alert alert-danger">
 					<strong>오류!</strong> 아이디 혹은 비밀번호가 유효한 값이 아닙니다.
+				</div>
+			</c:if>
+			<c:if test="${param.error eq 'deny'}">
+				<div class="alert alert-danger">
+					<strong>오류!</strong> 로그인이 필요한 서비스 입니다.
 				</div>
 			</c:if>
 			<form method="post" action="login.do">

@@ -1,3 +1,4 @@
+<%@page import="java.util.Arrays"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isErrorPage="true"%>
 <!DOCTYPE html>
@@ -16,6 +17,13 @@
 			<h1>Server Error</h1>
 			<div class="alert alert-danger">
 				<strong>에러메세지</strong> <%=exception.getMessage() %>
+				<%
+					for (StackTraceElement el : exception.getStackTrace()){
+				%>
+						<p><%=el.toString() %></p>
+				<%
+					}
+				%>
 			</div>
 			<p class="text-right">
 				<a href="home.do" class="btn btn-default">홈</a>

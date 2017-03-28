@@ -13,7 +13,11 @@
 	-->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>WEB-INF/spring/root-context.xml</param-value>
+		<param-value>
+			WEB-INF/spring/root-context.xml,
+			WEB-INF/spring/database-context.xml
+			WEB-INF/spring/mybatis-context.xml
+		</param-value>
 	</context-param>
 	<!-- 서버가 켜지면 실행이 된다. servletContext를 상속받아 생성하면 -->
 	<listener>
@@ -48,5 +52,7 @@
 		<servlet-name>todo</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
+	
+	
 	
 </web-app>

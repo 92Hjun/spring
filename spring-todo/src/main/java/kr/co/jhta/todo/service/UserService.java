@@ -1,7 +1,9 @@
 package kr.co.jhta.todo.service;
 
-import kr.co.jhta.todo.vo.User;
+import org.springframework.transaction.annotation.Transactional;
 
+import kr.co.jhta.todo.vo.User;
+@Transactional
 public interface UserService {
 	
 	void registerUser(User user);

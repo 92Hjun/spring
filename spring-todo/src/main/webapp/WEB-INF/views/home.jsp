@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>home</title>
+<title>Todo - home</title>
 </head>
 <body>
 	<div class="container">
@@ -24,9 +24,14 @@
 					</p>
 				</c:when>
 				<c:otherwise>
+					<div class="panel">
+						<div class="panel-body">
+							
+						</div>
+					</div>
 					<p class="text-right">
-						<a href="" class="btn btn-default">일정보기</a>
-						<a href="" class="btn btn-default">일정등록</a>
+						<a href="todo.do" class="btn btn-default">일정보기</a>
+						<a href="addtodo.do" class="btn btn-default">일정등록</a>
 						<a href="logout.do" class="btn btn-primary">로그아웃</a>
 					</p>
 				</c:otherwise>
