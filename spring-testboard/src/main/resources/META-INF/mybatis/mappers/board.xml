@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.test.dao.BoardDAO">
+
+	<select id="getAllBoardList" resultType="Board">
+		SELECT 
+			B_NO			AS no,
+			B_TITLE			AS title,
+			B_CONTENTS		AS contents,
+			B_WRITER		AS writer,
+			B_REGDATE		AS regdate,
+			B_COUNT			AS count,
+			B_CATEGORY		AS category,
+			B_FILE			AS fileName,
+			B_DEPARTMENT	AS department
+		FROM
+			B_BOARD
+	</select>
+	
+	<insert id="addBoard" parameterType="kr.co.test.vo.Board">
+		INSERT INTO B_BOARD (
+								B_NO,
+								B_TITLE, 
+								B_CONTENTS,
+								B_WRITER,
+								<if test="department != null">
+								B_DEPARTMENT,
+								</if>
+								<if test="fileName != null" >
+								B_FILE,
+								</if>
+								B_CATEGORY
+							) 
+		VALUES  (
+					BOOK_SEQ.nextval,
+					#{title},
+					#{contents},
+					#{writer},
+					<if test="department != null">
+					#{department},
+					</if>					
+					<if test="fileName != null" >
+					#{fileName},
+					</if>
+					#{category}
+				)
+	</insert>
+</mapper>

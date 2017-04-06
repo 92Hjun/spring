@@ -1,16 +1,21 @@
-package kr.co.jhta.todo.vo;
+package kr.co.jhta.blog.vo;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 
 public class UserForm {
 	
 	@NotNull
+	@Length(min=4)
 	private String id;
 	@NotNull
+	@Length(min=4)
 	private String pwd;
+	@NotNull
+	@Length(min=2)
 	private String name;
 	@Pattern(regexp="\\d{3}-\\d{4}-\\d{4}")
 	private String phone;
@@ -51,4 +56,7 @@ public class UserForm {
 	public String toString() {
 		return "UserForm [id=" + id + ", pwd=" + pwd + ", name=" + name + ", phone=" + phone + ", email=" + email + "]";
 	}
+	
+	
+	
 }
