@@ -1,0 +1,81 @@
+package kr.co.jhta.vo;
+
+public class SupplementLectureTableVo {
+
+	private String professorId;
+	private int subjectNo;
+	private String majorCode;
+	private String subjectName;
+	private String professorName;
+	private String supplementLectureCheck;
+	private String professorNumber;
+	private String majorOption;
+	private int majorScore;
+	private int subjectLectureNumber;
+	
+	
+	
+	
+	public String getProfessorId() {
+		return professorId;
+	}
+	public void setProfessorId(String professorId) {
+		this.professorId = professorId;
+	}
+	public int getSubjectNo() {
+		return subjectNo;
+	}
+	public void setSubjectNo(int subjectNo) {
+		this.subjectNo = subjectNo;
+	}
+	public String getMajorCode() {
+		return majorCode;
+	}
+	public void setMajorCode(String majorCode) {
+		this.majorCode = majorCode;
+	}
+	public String getSubjectName() {
+		return subjectName;
+	}
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
+	}
+	public String getProfessorName() {
+		return professorName;
+	}
+	public void setProfessorName(String professorName) {
+		this.professorName = professorName;
+	}
+	public String getSupplementLectureCheck() {
+		return supplementLectureCheck;
+	}
+	public void setSupplementLectureCheck(String supplementLectureCheck) {
+		this.supplementLectureCheck = supplementLectureCheck;
+	}
+	public String getProfessorNumber() {
+		return professorNumber;
+	}
+	public void setProfessorNumber(String professorNumber) {
+		this.professorNumber = professorNumber;
+	}
+	public String getMajorOption() {
+		return majorOption;
+	}
+	public void setMajorOption(String majorOption) {
+		this.majorOption = majorOption;
+	}
+	public int getMajorScore() {
+		return majorScore;
+	}
+	public void setMajorScore(int majorScore) {
+		this.majorScore = majorScore;
+	}
+	public int getSubjectLectureNumber() {
+		return subjectLectureNumber;
+	}
+	public void setSubjectLectureNumber(int subjectLectureNumber) {
+		this.subjectLectureNumber = subjectLectureNumber;
+	}
+	
+	
+}

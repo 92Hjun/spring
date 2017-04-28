@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="729" key="DIALOG_X_ORIGIN"/>
+		<item value="404" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">
+		<item value="1175" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="717" key="DIALOG_HEIGHT"/>
+		<item value="33" key="DIALOG_X_ORIGIN"/>
+		<item value="25" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="System" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="system"/>
+			<item value="getRegisByUserNo"/>
+			<item value="stuqnaboard"/>
+			<item value="freeboardaddreview"/>
+			<item value="studboarddetail"/>
+			<item value="deptboarddetail"/>
+			<item value="detail"/>
+			<item value="profqnaaddreview"/>
+		</list>
+		<list key="replacehistory">
+			<item value="b_board_seq.nextval"/>
+			<item value="board_seq"/>
+			<item value="sm"/>
+			<item value="pno"/>
+			<item value=" "/>
+			<item value="publisher"/>
+			<item value="publsher"/>
+			<item value="&quot;&quot;"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="288" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="390" key="DIALOG_HEIGHT"/>
+		<item value="752" key="DIALOG_X_ORIGIN"/>
+		<item value="240" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

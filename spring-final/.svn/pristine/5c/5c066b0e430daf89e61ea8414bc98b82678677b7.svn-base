@@ -1,0 +1,104 @@
+package kr.co.jhta.controller;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.apache.commons.beanutils.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import kr.co.jhta.service.message.MessageService;
+import kr.co.jhta.vo.Message;
+import kr.co.jhta.vo.MessageForm;
+import kr.co.jhta.vo.Professor;
+import kr.co.jhta.vo.stu.Student;
+
+@Controller
+public class MessageController {
+	
+	@Autowired
+	private MessageService messageService;
+	
+	@RequestMapping("adminmessageform")
+	public String adminMessageForm(Model model) {
+		model.addAttribute("messageForm", new MessageForm());
+		return "administer/adminmessageform";
+	}
+	
+	@RequestMapping("adminsendmessagebox")
+	public String adminSendEmailBox(Model model, Professor prof) {
+		List<Message> messageList = messageService.getReceiveMessageAdmin(prof.getId());
+		model.addAttribute("messageList", messageList);
+		
+		return "administer/adminsendmessagebox";
+	}
+	
+	@RequestMapping("adminrecmessagebox")
+	public String adminRecieveEmailBox() {
+		return "administer/adminrecmessagebox";
+	}
+	
+	@RequestMapping(value="sendmessage", method=RequestMethod.POST)
+	public String sendMessage(@ModelAttribute(name="messageForm") MessageForm messageForm, Professor prof, String option) throws IllegalAccessException, InvocationTargetException {
+		String[] receiverList;
+		
+		if (option.equals("name")) {
+			// 보내는 사람이 여러 명일 경우와, 한 명을 경우를 나누는 코드
+			if (messageForm.getReceiver().contains(",")) {
+				receiverList = messageForm.getReceiver().split(",");
+			} else {
+				receiverList = new String[1];
+				receiverList[0] = messageForm.getReceiver();
+			}
+			
+			for (String receiver : receiverList) {
+				Message message = new Message();
+				BeanUtils.copyProperties(message, messageForm);
+				message.setWriter(prof.getId());
+				message.setWriterName(prof.getName());
+				message.setReceiver(receiver);
+				messageService.addMessage(message);
+			}			
+		} else if (option.equals("division")) {
+			List<Student> stuList = messageService.getStudentByCode(messageForm.getReceiver());
+		} else if (option.equals("subject")) {
+			
+		}
+		
+		return "redirect:/adminrecmessagebox";
+	}
+	
+	@RequestMapping(value="deletemessage")
+	public String deleteMessage(Integer[] dnoList) {
+		for (int dno : dnoList) {
+			messageService.deleteSendMessage(dno);
+		}
+		
+		return "redirect:/adminsendmessagebox";
+	}
+	
+	@RequestMapping("/adminsearch")
+	public @ResponseBody List<?> adminAddressSearch(String checkedRadio, String searchWord, String searchOption) {
+		List<?> resultList = new ArrayList<Object>();
+		
+		if (searchOption.equals("name")) {
+			if (checkedRadio.equals("stu")) {
+				resultList = messageService.getAddressByStuName(searchWord);
+			} else if (checkedRadio.equals("pro")) {
+				resultList = messageService.getAddressByProName(searchWord);
+			}
+		} else if (searchOption.equals("division")) {
+			resultList = messageService.getDivisionByName(searchWord);
+		} else if (searchOption.equals("subject")) {
+			
+		}
+		
+		return resultList;
+	}
+}

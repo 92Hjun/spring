@@ -1,0 +1,14 @@
+package kr.co.test.vo;
+
+import java.util.Date;
+
+public class User {
+	
+	private int no;
+	private String id;
+	private String pwd;
+	private String name;
+	private String phone;
+	private String email;
+	private Date regdate;
+}

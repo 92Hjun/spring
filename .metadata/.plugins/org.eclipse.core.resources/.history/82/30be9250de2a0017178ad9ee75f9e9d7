@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="resources/bootstrap/bootstrap.min.css">
+<script type="text/javascript" src="resources/angular/angular.min.js"></script>
+<script type="text/javascript">
+	var app = angular.module('myApp', []);
+	
+	app.controller('memberCtrl', function($scope){
+		$scope.members = [
+			{username:'홍길동', email:'hong@naver.com'},
+			{username:'김유신', email:'kim@me.com'},
+			{username:'강감찬', email:'hong@naver.com'},
+		];
+		
+	});
+	
+	app.controller('orderCtrl', function($scope){
+		
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+var other = angular.module('otherModule', []);
+
+other.directive('itemList', function(){
+	
+});

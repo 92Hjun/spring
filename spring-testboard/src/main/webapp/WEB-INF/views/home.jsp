@@ -36,7 +36,7 @@
 					<c:forEach items="${boardList }" var="item" >
 						<tr>
 							<td>${item.no }</td>
-							<td>${item.title }</td>
+							<td><a href="board.ss?bno=${item.no }">${item.title }</a></td>
 							<td>${item.writer }</td>
 							<td><fmt:formatDate value="${item.regdate }"/> </td>
 							<td>${item.count }</td>
@@ -48,12 +48,6 @@
 				<a href="addContent.ss" class="btn btn-primary btn-xs">글쓰기</a>
 				<a href="login.ss" class="btn btn-success btn-xs">로그인</a>
 			</div>
-			<select id="test-option" hidden="true">
-				<option value="대기중">대기중</option>
-				<option value="진행중">진행중</option>
-				<option value="승인">승인</option>
-				<option value="보류">보류</option>
-			</select>
 		</div>
 	</div>
 </body>

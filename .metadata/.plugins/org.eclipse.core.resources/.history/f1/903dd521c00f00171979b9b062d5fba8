@@ -1,0 +1,11 @@
+package kr.co.test.service;
+
+import kr.co.test.vo.User;
+
+public interface UserService {
+
+	void registerUser(User user);
+
+	void getUserById(String id);
+
+}

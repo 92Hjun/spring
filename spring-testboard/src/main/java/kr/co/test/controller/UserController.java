@@ -25,6 +25,7 @@ public class UserController {
 			user.setUserEmpty("S");
 			user.setDepartment("Q");
 			session.setAttribute("LOGINUSER", user);
+			
 		}else {
 			return "redirect:/login.ss?err=deny";
 		}

@@ -16,7 +16,6 @@
 		<div class="row">
 			<form:form action="addContent.ss" method="post" commandName="boardForm" enctype="multipart/form-data">
 				<div class="form-group">
-				
 					<form:select path="category" cssClass="form-control">
 						<option value="Y">공지사항</option>
 						<option value="N">자유글</option>

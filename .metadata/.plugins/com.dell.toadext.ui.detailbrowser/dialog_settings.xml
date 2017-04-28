@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraQueryResultViewer">
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#B_VIEWALL">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#U_STUDENT">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#E_ENROLLMENT">
+		</section>
+		<section name="0daa9e04-ca21-471d-b1cf-f872b81c60be#TB_BOARD">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#C_CHANGEMAJOR">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#R_REINSTATEMENT">
+		</section>
+		<section name="0daa9e04-ca21-471d-b1cf-f872b81c60be#TB_USER">
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#J_SUBJECT">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#P_PROFESSORLECTURERATING">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#U_STUDENT">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#T_SITEMAP">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#J_DIVISION">
+		</section>
+		<section name="1136d80f-ec1c-4e1d-9b20-e0fc0f5e478c#L_LECTURE">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#U_PROFESSOR">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#B_VIEWALL">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#J_SUBJECT">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#C_CODEREGISTER">
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#R_REVIEW">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#B_BOARD">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#L_LECTURE">
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#R_REGISUBJECT">
+			<item value="" key="where"/>
+			<list key="whereHistory">
+			</list>
+			<list key="hidden">
+			</list>
+			<list key="order">
+			</list>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#E_ENROLLMENT">
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#B_BOARD">
+		</section>
+	</section>
+</section>

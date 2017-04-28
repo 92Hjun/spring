@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="resources/bootstrap/bootstrap.min.css">
+<script type="text/javascript" src="resources/angular/angular.min.js"></script>
+<script type="text/javascript">
+	var myApp = angular.module('myApp', []);
+	
+	myApp.filter('myFilter', function(){
+		
+		return function (items, loc) {
+			var filteredItems = [];
+			
+			if (loc) {
+				items.forEach(function(item, index){
+					if(item.addr == loc){
+						filteredItems.push(item);
+					}
+				});
+			} else {
+				return items;
+				
+			}
+			
+			return filteredItems;
+		}
+	});
+	
+	myApp.controller('empCtrl', function($scope){
+		$scope.employees = [
+			{id:100,firstName:'홍',lastName:'길동',email:'hong@naver.com',addr:'서울'},
+			{id:101,firstName:'이',lastName:'순신',email:'sunshin@naver.com',addr:'전라'},
+			{id:102,firstName:'류',lastName:'관순',email:'kwansoon@naver.com',addr:'충청'},
+			{id:103,firstName:'강',lastName:'감찬',email:'kamchan@naver.com',addr:'황해'},
+			{id:104,firstName:'윤',lastName:'봉길',email:'bonggil@naver.com',addr:'경기'},
+			{id:105,firstName:'이',lastName:'성계',email:'sungkye@naver.com',addr:'강원'},
+			{id:106,firstName:'김',lastName:'구',email:'goo@naver.com',addr:'충청'},
+			{id:107,firstName:'김',lastName:'유신',email:'youshin@naver.com',addr:'경상'},
+			{id:108,firstName:'이',lastName:'황',email:'hwang@naver.com',addr:'경상'},
+			{id:109,firstName:'류',lastName:'성룡',email:'sungyoung@naver.com',addr:'충청'},
+			{id:110,firstName:'이',lastName:'항복',email:'hangbok@naver.com',addr:'서울'},
+			{id:111,firstName:'안',lastName:'중근',email:'joongken@naver.com',addr:'강원'},
+			{id:112,firstName:'김',lastName:'소월',email:'kim@naver.com',addr:'경기'},
+			{id:113,firstName:'윤',lastName:'동주',email:'yoon@naver.com',addr:'경상'},
+			{id:114,firstName:'박',lastName:'목월',email:'park@naver.com',addr:'전라'},
+			{id:115,firstName:'황',lastName:'순원',email:'hawng@naver.com',addr:'서울'}
+		];
+		
+		$scope.sort = "id";
+		$scope.location = "";
+	});
+
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row" ng-controller="empCtrl">
+			<h3>직원 리스트</h3>
+			<div class="row well">
+				<input type="radio" ng-model="location" value=""> 전체
+				<input type="radio" ng-model="location" value="강원"> 강원 
+				<input type="radio" ng-model="location" value="경기"> 경기
+				<input type="radio" ng-model="location" value="경상"> 경상
+				<input type="radio" ng-model="location" value="서울"> 서울
+				<input type="radio" ng-model="location" value="전라"> 전라
+				<input type="radio" ng-model="location" value="충청"> 충청
+				<input type="radio" ng-model="location" value="황해"> 황해
+			</div>
+			
+			<div class="row">
+				<label>정렬 기준 : </label>
+				<select ng-model="sort">
+					<option value="id"> Employee ID</option>
+					<option value="firtName"> Employee FirstName</option>
+					<option value="lastName"> Employee LastName</option>
+					<option value="email"> Employee Email</option>
+					<option value="addr"> Employee Address</option>
+				</select>
+			</div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>id</th>
+						<th>first name</th>
+						<th>last name</th>
+						<th>email</th>
+						<th>address</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="emp in employees | myFilter:location | orderBy : sort">
+						<td>{{emp.id}}</td>
+						<td>{{emp.firstName}}</td>
+						<td>{{emp.lastName}}</td>
+						<td>{{emp.email}}</td>
+						<td>{{emp.addr}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -65,6 +65,7 @@ $(function() {
 		$(":input[name='display']").val(rows);
 		*/
 		$("#search-form").submit();
+		
 	});
 	
 	$("button:has('.glyphicon')").click(function() {

@@ -1,0 +1,83 @@
+package kr.co.jhta.controller.report;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import kr.co.jhta.service.report.StuReportService;
+import kr.co.jhta.service.sitemap.SitemapService;
+import kr.co.jhta.service.user.RegisubjectService;
+import kr.co.jhta.service.user.StudentService;
+import kr.co.jhta.vo.SiteMap;
+import kr.co.jhta.vo.stu.Regisubject;
+import kr.co.jhta.vo.stu.StuReport;
+import kr.co.jhta.vo.stu.Student;
+
+@Controller
+@RequestMapping("/stud")
+public class StuReportController {
+
+	@Autowired
+	StuReportService stuRepService;
+	
+	@Autowired
+	StudentService stuService;
+	
+	@Autowired
+	SitemapService sitemapService;
+	
+	@Autowired
+	RegisubjectService regisubjectService;
+	
+	private int nowScore = 0; 
+	
+	@RequestMapping(value="addNewReport", method=RequestMethod.POST)
+	public String addNewReportProcess(Model model, Student student) {
+		
+		StuReport stuReport = new StuReport();
+		
+		stuRepService.addNewReportService(stuReport);
+		
+		return "redirect:/ReportHome";
+	}
+	
+	@RequestMapping(value="ReportHome", method=RequestMethod.GET)
+	public String stuReportHome(Model model, Student student) {
+		
+		
+		return "student/report/stuReportHome";
+	}
+	
+	@RequestMapping(value="/stuReport", method=RequestMethod.GET)
+	public String stuReportForm(Model model, Student student) {
+		
+		model.addAttribute("student", student);
+		List<SiteMap> deptList = sitemapService.getAllSitemapPreService();
+		model.addAttribute("deptList", deptList);
+		
+		nowScore = stuService.getNowScoreService(student.getNo());
+		model.addAttribute("applyScore", nowScore);
+		
+		List<Regisubject> regisubList = regisubjectService.getRegisByUserNoService(student.getNo());
+		if(!regisubList.isEmpty()) {
+			model.addAttribute("regisubList" , regisubList);
+		}
+		
+		return "student/report/stuReportForm";
+	}
+	
+	@RequestMapping(value="/stuReportAfter", method=RequestMethod.GET)
+	public String stuReportAfterForm(Model model, Student student) {
+		
+		model.addAttribute("student", student);
+		
+		return "student/report/stuAfterReportForm";
+	}
+
+	
+	
+}

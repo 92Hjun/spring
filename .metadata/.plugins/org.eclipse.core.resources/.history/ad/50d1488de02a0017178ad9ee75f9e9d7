@@ -1,0 +1,5 @@
+var my_directives = angular.module('otherModule', []);
+
+my_directives.directive('sample', function(){
+	
+});

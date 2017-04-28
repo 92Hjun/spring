@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="resources/bootstrap/bootstrap.min.css">
+<script type="text/javascript" src="resources/angular/angular.min.js"></script>
+<script type="text/javascript" src="directives/my.js"></script>
+<script type="text/javascript">
+										//의존성 주입 (Dependency Injection)
+	var app = angular.module('myApp', ['otherModule']);
+	
+	app.controller('memberCtrl', function($scope){
+		$scope.members = [
+			{username:'홍길동', email:'hong@naver.com'},
+			{username:'김유신', email:'kim@me.com'},
+			{username:'강감찬', email:'kang@hanmail.com'}
+		]
+		
+	});
+	
+	app.controller('bookCtrl', function($scope){
+		$scope.books = [
+			{title:'이것이 자바다', price:36000, publisher:'도우출판'},
+			{title:'자바의 정석', price:30000, publisher:'한빛 미디어'},
+			{title:'알기쉬운 자료구조', price:25000, publisher:'도우출판'}
+		]
+	});
+</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-5" ng-controller="memberCtrl">
+				<h3>사용자 리스트</h3>
+				<div item-list>
+				
+				</div>
+			</div>
+			<div class="col-sm-5" ng-controller="bookCtrl">
+				<h3>책 리스트</h3>
+				<div item-list>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

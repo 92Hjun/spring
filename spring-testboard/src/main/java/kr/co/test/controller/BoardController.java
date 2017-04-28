@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.test.service.BoardService;
 import kr.co.test.vo.Board;
@@ -33,14 +34,21 @@ public class BoardController {
 	public String addContent(@Valid BoardForm boardForm, Errors errors, HttpSession session){
 		Board board = new Board();
 		BeanUtils.copyProperties(boardForm, board);
-		System.out.println(boardForm);
 			
 		User user = (User)session.getAttribute("LOGINUSER");
-		System.out.println(user);
+		if (user == null) {
+			return "redirect:/login.ss?invalid=false";
+		}
 		board.setWriter(user.getId());
-		System.out.println(board);
 		boardService.addBoard(board);
 		
 		return "redirect:/home.ss";
+	}
+	
+	@RequestMapping("/board.ss")
+	public String boardView(@RequestParam("bno") int bno){
+		
+		
+		return "home";
 	}
 }

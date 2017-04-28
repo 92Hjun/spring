@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="com.dell.toadext.ui.wizards.data.SqlConverterProperty">
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraUserPrivilegesViewer">
+	</section>
+	<section name="com.dell.toadext.view.connection.actions.LinkWithEditorAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.editor.AbstractEditorExtension$HideResultSetAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraTableIndexesViewer">
+	</section>
+	<section name="com.dell.toadext.ui.console.actions.LockAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.ui.console.actions.ShowDataAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraTriggersViewer">
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraUserRolesViewer">
+	</section>
+	<section name="com.dell.toadext.view.monitor.AbstractConnectionMonitorView$LockAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="aliases_section">
+		<list key="aliases">
+		</list>
+		<list key="queryables">
+		</list>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraUserTablespacesViewer">
+	</section>
+	<section name="com.dell.toadext.ui.pages.ToadextOutlinePage$OutlineSortAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.view.connection.view.handlers.GroupByDbHandler">
+	</section>
+	<section name="com.dell.toadext.ui.console.actions.ShowErrorsAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.detailbrowser.AbstractColumnsViewer$ShowCommentAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.ui.console.actions.ShowInputAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.ui.console.DbConsoleView">
+		<section name="saveToFile">
+		</section>
+	</section>
+	<section name="com.dell.toadext.ui.quickdoc.QuickDocView$LinkWithSelectionAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.editor.AbstractEditorExtension$RightAlignResultSet">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraTableColumnsViewer">
+	</section>
+	<section name="com.dell.toadext.view.monitor.DbmsOutputView">
+		<section name="saveToFile">
+		</section>
+	</section>
+	<section name="com.dell.toadext.schemabrowser.actions.DisplayDescribeObjectEditorAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.editor.SqlEditor">
+		<section name="saveToFile">
+		</section>
+	</section>
+	<section name="com.dell.toadext.schemabrowser.actions.LinkWithEditorAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.editor.OraSqlEditorExtension">
+		<section name="editorWeights">
+			<item value="2000" key="rsWeight"/>
+			<item value="-1300" key="editorWeight"/>
+		</section>
+	</section>
+	<section name="com.dell.toadext.view.monitor.AbstractConnectionMonitorView$EnableAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.detailbrowser.viewer.AbstractQueryResultViewer$SortColumnsAction">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraQueryResultViewer$1">
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.P_PROFESSORLECTURERATING">
+			<item value=",,,,," key="col.widths"/>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.R_REVIEW">
+			<item value=",,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.C_CODEREGISTER">
+			<item value=",,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.C_CHANGEMAJOR">
+			<item value=",,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.L_LECTURE">
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.E_ENROLLMENT">
+			<item value=",,,,,,," key="col.widths"/>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.B_BOARD">
+			<item value=",,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.T_SITEMAP">
+			<item value=",,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.U_PROFESSOR">
+			<item value=",,,,,,,,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.U_STUDENT">
+			<item value=",,,,,,,,,,,,,,,,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.J_SUBJECT">
+			<item value=",,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.E_ENROLLMENT">
+			<item value=",,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.U_STUDENT">
+			<item value=",,,,,,,,,,,,,,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="0daa9e04-ca21-471d-b1cf-f872b81c60be#HR.TB_USER">
+			<item value=",,,," key="col.widths"/>
+		</section>
+		<section name="1136d80f-ec1c-4e1d-9b20-e0fc0f5e478c#HR.L_LECTURE">
+			<item value=",,,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.J_SUBJECT">
+			<item value=",,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.B_BOARD">
+			<item value=",,,,,,,,,,," key="col.widths"/>
+		</section>
+		<section name="0daa9e04-ca21-471d-b1cf-f872b81c60be#HR.TB_BOARD">
+			<item value=",,,,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.R_REINSTATEMENT">
+		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.B_VIEWALL">
+			<item value=",,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.J_DIVISION">
+			<item value=",,,,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.B_VIEWALL">
+			<item value=",,,," key="col.widths"/>
+		</section>
+		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.R_REGISUBJECT">
+			<item value=",,,,," key="col.widths"/>
+		</section>
+	</section>
+	<section name="com.dell.toadext.editor.AbstractEditorExtension$BottomAlignResultSet">
+		<item value="false" key="active"/>
+	</section>
+	<section name="com.dell.toadext.ui.console.actions.ShowStandardLogsAction">
+		<item value="true" key="active"/>
+	</section>
+	<section name="com.dell.toadext.oracle.nui.viewer.detail.OraTableConstraintsViewer">
+	</section>
+	<section name="com.dell.toadext.detailbrowser.AbstractColumnsViewer$SortColumnsAction">
+		<item value="false" key="active"/>
+	</section>
+</section>

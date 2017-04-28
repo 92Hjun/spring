@@ -1,0 +1,20 @@
+package kr.co.test.service;
+
+import org.springframework.stereotype.Service;
+
+import kr.co.test.dao.UserDAO;
+import kr.co.test.vo.User;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	private UserDAO userDAO;
+	
+	@Override
+	public void addUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

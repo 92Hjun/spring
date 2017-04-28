@@ -1,0 +1,13 @@
+package kr.co.test.dao;
+
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+
+import kr.co.test.vo.User;
+
+public interface UserDAO {
+
+	private SqlMapClientTemplate template;
+	
+	void registerUser(User user);
+
+}

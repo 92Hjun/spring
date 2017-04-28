@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.jhta.dao.hakjuk.JejukDAO">
+	<!-- 학생불러오기 -->
+	<select id="searchByOpt" parameterType="kr.co.jhta.vo.JejukStuSearchForm" resultType="Student">
+		select 
+			U_STU_NO as no, 
+			U_STU_DIVISION as division, 
+			U_STU_EMAIL as email, 
+			U_STU_ENTERDATE as enterDate, 
+			U_STU_GRADE as grade,
+			U_STU_ID as id, 
+			U_STU_LEAVEDATE as leaveDate, 
+			U_STU_NAME as name, 
+			U_STU_PHONE as phone, 
+			U_STU_REGISTER as register
+		from 
+			U_STUDENT
+		<where>
+			<if test="keyword != ''">
+				<if test="opt == 'studentid'">
+					U_STU_ID like '%'|| #{keyword} || '%'
+				</if>
+				<if test="opt == 'studentname'">
+					U_STU_NAME like '%'|| #{keyword} || '%'
+				</if>
+			</if>
+		</where>
+	</select>
+</mapper>

@@ -1,0 +1,8 @@
+package kr.co.test.controller;
+
+public class LoginForm {
+	
+	private String id;
+	private String pwd;
+	
+}

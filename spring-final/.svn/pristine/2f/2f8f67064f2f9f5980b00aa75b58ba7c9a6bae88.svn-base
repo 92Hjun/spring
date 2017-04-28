@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.jhta.dao.report.StuReportDao">
+
+	<!-- StuReport -->
+	<select id="getStuReportByStuNo" parameterType="int" resultType="StuReport">
+		select P_CNO 		as no, 
+			   P_S_NO 		as "student.no",
+			   P_TITLE 		as title,
+			   P_CONTENT 	as content,
+			   P_FILE 		as file,
+			   P_SHOW		as show,
+			   P_P_NO       as "report.professor.no" 
+		FROM P_REPORTCONTENT
+		WHERE P_S_NO = #{stuNo}
+	</select>
+	
+	<insert id="addNewReport" parameterType="StuReport">
+		INSERT INTO P_REPORTCONTENT 
+				(P_CNO, 
+				 P_P_NO, 
+				 P_S_NO, 
+				 P_TITLE, 
+				 P_CONTENT,
+				 P_FILE) 
+		VALUES
+				(P_REPORTCONTENT_SEQ.nextval, 
+				 #{report.professor.no}, 
+				 #{student.no}, 
+				 #{title}, 
+				 #{content},
+				 #{file})
+	</insert>
+	
+	<insert id="addNewReportPlusShow" parameterType="StuReport">
+		INSERT INTO P_REPORTCONTENT 
+				(P_CNO, 
+				 P_P_NO, 
+				 P_S_NO, 
+				 P_TITLE, 
+				 P_CONTENT,
+				 P_SHOW,
+				 P_FILE) 
+		VALUES
+				(P_REPORTCONTENT_SEQ.nextval, 
+				 #{report.professor.no}, 
+				 #{student.no}, 
+				 #{title}, 
+				 #{content},
+				 true,
+				 #{file})
+	</insert>
+	
+</mapper>

@@ -1,0 +1,34 @@
+package kr.co.jhta.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import kr.co.jhta.service.hakjuk.JejukService;
+import kr.co.jhta.vo.JejukStuSearchForm;
+import kr.co.jhta.vo.SubjectSearchForm;
+import kr.co.jhta.vo.stu.Student;
+
+@Controller
+@RequestMapping("/admin")
+public class JejukController {
+
+	@Autowired
+	private JejukService jejukService;
+	
+	@RequestMapping("/jejukmain")
+	public String jejukMain() {
+		return "collegeregister/adminjejukmain";
+	}
+	
+	// 학생 검색 결과
+	@RequestMapping("/searchstubyopt")
+	public String searchStuByOpt(JejukStuSearchForm searchForm, Model model) {
+		List<Student> stuList = jejukService.searchByOpt(searchForm);
+		model.addAttribute("resultList", stuList);
+		return "collegeregister/adminjejukmain";
+	}
+}

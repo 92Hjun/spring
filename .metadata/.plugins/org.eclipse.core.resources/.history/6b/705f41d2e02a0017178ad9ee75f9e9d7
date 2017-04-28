@@ -1,0 +1,8 @@
+var other = angular.module('otherModule', []);
+
+// 디렉티브 정의하기
+other.directive('itemList', function(){
+	return function(scope, element, attrs){
+		
+	}
+});

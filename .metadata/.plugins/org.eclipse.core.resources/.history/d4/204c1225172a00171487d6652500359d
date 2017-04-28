@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="resources/bootstrap/bootstrap.min.css">
+<script type="text/javascript" src="resources/angular/angular.min.js"></script>
+<script type="text/javascript">
+	var myApp = angular.module('myApp', []);
+	
+	// 모듈에 컨트롤러 추가
+	myApp.controller('productCtrl', function($scope){
+		
+	});
+	
+	// 모듈에 디렉티브 추가
+	myApp.directive();
+</script>
+</head>
+<body>
+	<div class="container">
+	   <!-- 
+	   		디렉티브(Directive)
+	   			angularjs의 지시어
+	   			html 태그의 기능을 확장시킨다.
+	   			다양한 built-in 디렉티브를 제공한다.
+	   				ng-App, ng-Controller, ng-repeat, ng-show, ng-hide, ng-model, ng-bind, 
+	   				ng-class, ng-click, ng-submit, ng-disabled, ng-enabled, ng-if, ng-switch
+	    -->
+	    
+	</div>
+</body>
+</html>

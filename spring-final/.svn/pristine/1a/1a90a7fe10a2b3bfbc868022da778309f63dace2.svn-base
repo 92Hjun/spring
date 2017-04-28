@@ -1,0 +1,11 @@
+package kr.co.jhta.service.report;
+
+import kr.co.jhta.vo.stu.StuReport;
+
+public interface StuReportService {
+
+	void addNewReportService(StuReport stuReport);
+	void addNewReportPlusShowService(StuReport stuReport);
+	
+	StuReport getStuReportByStuNoService(int stuNo);
+}

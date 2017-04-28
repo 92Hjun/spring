@@ -1,0 +1,19 @@
+package kr.co.jhta.service.message;
+
+import java.util.List;
+
+import kr.co.jhta.vo.Message;
+import kr.co.jhta.vo.Professor;
+import kr.co.jhta.vo.SiteMap;
+import kr.co.jhta.vo.stu.Student;
+
+public interface MessageService {
+	
+	List<Student> getAddressByStuName(String searchWord);
+	List<Professor> getAddressByProName(String searchWord);
+	void addMessage(Message message);
+	List<Message> getReceiveMessageAdmin(String id);
+	void deleteSendMessage(int dno);
+	List<SiteMap> getDivisionByName(String searchWord);
+	List<Student> getStudentByCode(String code);
+}

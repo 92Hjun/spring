@@ -1,0 +1,20 @@
+package kr.co.test.dao;
+
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+import org.springframework.stereotype.Repository;
+
+import kr.co.test.vo.User;
+
+@SuppressWarnings("deprecation")
+@Repository
+public class UserDAOImpl implements UserDAO{
+
+	private SqlMapClientTemplate template;
+	
+	@Override
+	public void addUser(User user) {
+		template.insert("addUser", user);
+		
+	}
+	
+}

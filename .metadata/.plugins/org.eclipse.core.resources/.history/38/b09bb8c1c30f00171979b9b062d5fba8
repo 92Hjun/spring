@@ -1,0 +1,26 @@
+package kr.co.test.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import kr.co.test.vo.TodoForm;
+
+@Controller
+public class TodoController {
+		
+	@RequestMapping(value="/addtodo.test",method=RequestMethod.GET)
+	public String addTodoForm(Model model){
+		model.addAttribute("addTodoForm", new TodoForm());
+		return "addtodo";
+	}
+	
+	
+	@RequestMapping(value="/addtodo.test")
+	public String addTodo(){
+		
+	}
+	
+	
+}

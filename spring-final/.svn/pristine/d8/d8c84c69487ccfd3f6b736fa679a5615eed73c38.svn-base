@@ -1,0 +1,11 @@
+package kr.co.jhta.service.hakjuk;
+
+import java.util.List;
+
+import kr.co.jhta.vo.JejukStuSearchForm;
+import kr.co.jhta.vo.stu.Student;
+
+public interface JejukService {
+
+	List<Student> searchByOpt(JejukStuSearchForm searchForm);
+}

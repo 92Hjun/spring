@@ -1,0 +1,27 @@
+package kr.co.test.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.ibatis.SqlMapClientTemplate;
+import org.springframework.stereotype.Repository;
+
+import kr.co.test.vo.User;
+
+@Repository
+public class UserDAOImpl implements UserDAO{
+	
+	@Autowired
+	private SqlMapClientTemplate template;
+	
+	@Override
+	public void addUser(User user) {
+		template.insert("addUser", user);
+		
+	}
+
+	@Override
+	public void searchUserById(String id) {
+		template.queryForObject("", parameterObject)
+		
+	}
+	
+}

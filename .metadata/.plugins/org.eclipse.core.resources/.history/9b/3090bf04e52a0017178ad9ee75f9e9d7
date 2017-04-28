@@ -1,0 +1,28 @@
+var other = angular.module('otherModule', []);
+
+// 디렉티브 정의하기
+other.directive('itemList', function(){
+	/*
+	 *	<div item-list="x" items="y"> 
+	 * 	scope		:	이 디렉티브가 사용된곳의 $scope를 가르킨다.
+	 * 	element		:	이 디렉티브가 사용된 태그를 가르킨다.	jQuery객체다.
+	 * 	attrs		:	이 디렉티브가 사용된 태그의 attribute정보를 담고있다.	
+	 */
+	return function(scope, element, attrs){
+		var value= attrs['item'];
+		var data = scope[value];
+		var dataValue = attrs['data'];
+		
+		if (angular.isArray(data)) {
+			var html = "<ul class='list-group'>";
+			data.forEach(function(item, index){
+				var text = item[dataValue];
+				html += "<li>" + + "</li>"
+			});
+			
+			html += "</ul>";
+			
+		}
+	}
+	
+});

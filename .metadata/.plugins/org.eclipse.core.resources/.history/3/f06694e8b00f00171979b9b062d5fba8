@@ -1,0 +1,65 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	.jumbotron{
+		margin-bottom: 0px !important;
+	}
+</style>
+<title>HOME</title>
+</head>
+<body>
+	<div class="container">
+	    <div class="jumbotron">
+	    	<div class="text-center">
+	    		<h1>ToDo</h1>
+	    	</div> 
+	    </div>
+	    <%@include file="nav.jsp" %>
+	    
+	    <table class="table table-bordered">
+	    	<colgroup>
+	    		<col width="10%">
+	    		<col width="80%">
+	    		<col width="10%">
+	    	</colgroup>
+	    	<thead>
+	    		<tr>
+		    		<th>No</th>
+		    		<th>Title</th>
+		    		<th>Complete</th>
+		    	</tr>
+	    	</thead>
+	    	<tbody>
+	    		<tr>
+	    			<td>1</td>
+	    			<td>ddd</td>
+	    			<td>ddd</td>
+	    		</tr>
+	    		<tr>
+	    			<td>1</td>
+	    			<td>ddd</td>
+	    			<td>ddd</td>
+	    		</tr>
+	    		<tr>
+	    			<td>1</td>
+	    			<td>ddd</td>
+	    			<td>ddd</td>
+	    		</tr>
+	    		<tr>
+	    			<td>1</td>
+	    			<td>ddd</td>
+	    			<td>ddd</td>
+	    		</tr>
+	    	</tbody>
+	    </table>
+	</div>
+</body>
+</html>

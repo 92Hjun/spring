@@ -1,0 +1,9 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		{{product.name}}
+	</div>
+	<div class="panel-body">
+		<p><label>제조사</label>{{product.company}}</p>
+		<p><label>가격</label>{{product.price(number)}}</p>
+	</div>
+</div>

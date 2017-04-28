@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.co.test.service.BoardService;
 
@@ -14,10 +15,11 @@ public class HomeController {
 	private BoardService boardService;
 	
 	
-	@RequestMapping("/home.ss")
+	@RequestMapping(value="/home.ss",method=RequestMethod.GET)
 	public String home (Model model) {
 		model.addAttribute("boardList", boardService.getAllBoardList());
 		return "home";
+		
 	}
 	
 }

@@ -1,0 +1,10 @@
+package kr.co.test.vo;
+
+import java.util.Date;
+
+public class TodoForm {
+	
+	private String title;
+	private Date eventDate;
+	private String description;
+}

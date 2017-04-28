@@ -1,0 +1,29 @@
+package kr.co.jhta.service.report;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import kr.co.jhta.dao.report.StuReportDao;
+import kr.co.jhta.vo.stu.StuReport;
+
+@Controller
+public class StuReportServiceImpl implements StuReportService{
+
+	@Autowired
+	StuReportDao stuRepDao;
+
+	@Override
+	public void addNewReportService(StuReport stuReport) {
+		stuRepDao.addNewReport(stuReport);
+	}
+
+	@Override
+	public void addNewReportPlusShowService(StuReport stuReport) {
+		stuRepDao.addNewReportPlusShow(stuReport);
+	}
+
+	@Override
+	public StuReport getStuReportByStuNoService(int stuNo) {
+		return stuRepDao.getStuReportByStuNo(stuNo);
+	}
+}

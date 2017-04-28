@@ -1,0 +1,24 @@
+package kr.co.jhta.service.hakjuk;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import kr.co.jhta.dao.hakjuk.JejukDAO;
+import kr.co.jhta.vo.JejukStuSearchForm;
+import kr.co.jhta.vo.SubjectSearchForm;
+import kr.co.jhta.vo.stu.Student;
+
+@Service
+public class JejukServiceImpl implements JejukService{
+
+	@Autowired
+	private JejukDAO jejukDao;
+	
+	@Override
+	public List<Student> searchByOpt(JejukStuSearchForm searchForm) {
+		return jejukDao.searchByOpt(searchForm);
+	}
+	
+}
