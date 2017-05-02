@@ -92,6 +92,9 @@
 		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.R_REVIEW">
 			<item value=",,,,,," key="col.widths"/>
 		</section>
+		<section name="5d311d6f-f8d5-40bb-81c4-63cd9247fc96#HR.U_PROFESSOR">
+			<item value=",,,,,,,,,,,,,,,,," key="col.widths"/>
+		</section>
 		<section name="1cf4675c-d319-4e50-a0d3-c0b1e240ca72#HR.C_CODEREGISTER">
 			<item value=",,,," key="col.widths"/>
 		</section>

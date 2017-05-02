@@ -1,0 +1,10 @@
+package demo2;
+
+public class App {
+	public static void main(String[] args) {
+		
+		Cloth shirt = new Cloth("셔츠", Size.SMALL);
+		
+		Cloth pants = new Cloth("바지", Size.SMALL);
+	}
+}

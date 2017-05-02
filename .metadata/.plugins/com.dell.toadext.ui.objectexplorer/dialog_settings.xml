@@ -6,17 +6,13 @@
 	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@6acd6523#root">
 	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@4544dca2#root">
+	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@36f4f0f1#root">
 	</section>
 	<section name="EXPORT_DDL_FILE#root">
 	</section>
 	<section name="CLONE_USER#root">
-	</section>
-	<section name="COUNT_ROWS#root">
-	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@5a54b08e#root">
-	</section>
-	<section name="REFRESH#root">
 	</section>
 	<section name="CASCADE_DROP#root">
 	</section>
@@ -24,27 +20,13 @@
 	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@13635599#root">
 	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@54c66983#root">
-	</section>
 	<section name="OPEN_DBO#root">
-	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@48bfb6a#root">
-	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@32db50ba#root">
-	</section>
-	<section name="SEPARATOR#root">
 	</section>
 	<section name="COPY_TABLE#root">
 	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@2155e1e2#root">
 	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@55ee4af4#root">
-	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@6420bcd1#root">
-	</section>
-	<section name="NEW_SEQUENCE#root">
-	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@3e388175#root">
 	</section>
 	<section name="CREATE_TABLE#root">
 	</section>
@@ -57,6 +39,38 @@
 	<section name="com.dell.toadext.schemabrowser.ActionList@621c34a5#root">
 	</section>
 	<section name="toadext.oracle.ui.generateEntityClassAction#root">
+	</section>
+	<section name="DEPENDENCIES#root">
+	</section>
+	<section name="REBUILD_ALL_INDEXES#root">
+	</section>
+	<section name="NEW_SYNONYM#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@6999c848#root">
+	</section>
+	<section name="RENAME#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@30885743#root">
+	</section>
+	<section name="COUNT_ROWS#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@5a54b08e#root">
+	</section>
+	<section name="REFRESH#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@54c66983#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@48bfb6a#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@32db50ba#root">
+	</section>
+	<section name="SEPARATOR#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@55ee4af4#root">
+	</section>
+	<section name="NEW_SEQUENCE#root">
+	</section>
+	<section name="com.dell.toadext.schemabrowser.ActionList@3e388175#root">
 	</section>
 	<section name="ORACLE#root">
 		<section name="My Schema">
@@ -532,10 +546,6 @@
 	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@2d53bfcc#root">
 	</section>
-	<section name="DEPENDENCIES#root">
-	</section>
-	<section name="REBUILD_ALL_INDEXES#root">
-	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@2c20b04a#root">
 	</section>
 	<section name="TRUNCATE#root">
@@ -548,10 +558,6 @@
 	</section>
 	<section name="EDIT_DDL_WORKSHEET#root">
 	</section>
-	<section name="NEW_SYNONYM#root">
-	</section>
-	<section name="RENAME#root">
-	</section>
 	<section name="DROP#root">
 	</section>
 	<section name="COPY_DDL_CLIPBOARD#root">
@@ -561,7 +567,5 @@
 	<section name="CREATE_SCHEMA#root">
 	</section>
 	<section name="com.dell.toadext.schemabrowser.ActionList@70a2b261#root">
-	</section>
-	<section name="com.dell.toadext.schemabrowser.ActionList@30885743#root">
 	</section>
 </section>

@@ -1,8 +1,0 @@
-package kr.co.jhta.controller.timechart;
-
-import org.springframework.web.bind.annotation.RestController;
-
-@RestController
-public class TimeChartAjaxController {
-	
-}

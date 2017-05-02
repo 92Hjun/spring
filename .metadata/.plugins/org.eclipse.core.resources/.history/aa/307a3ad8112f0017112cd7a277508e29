@@ -1,0 +1,18 @@
+package demo2;
+
+public class App {
+	public static void main(String[] args) {
+		
+		Cloth shirt = new Cloth("셔츠", Size.SMALL);
+		
+		Cloth pants = new Cloth("바지", Size.LARGE);
+	}
+	
+	public static void shipping(Cloth cloth){
+		if (Size.SMALL == cloth.getSize()) {
+			System.out.println("무료");
+		}else if (Size.MEDIUM == cloth.getSize()){
+			
+		}
+	}
+}

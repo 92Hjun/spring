@@ -104,11 +104,11 @@
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>SEQUENCES</Key>
+          <Key>VIEWS</Key>
           <Value>true</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>VIEWS</Key>
+          <Key>SEQUENCES</Key>
           <Value>true</Value>
         </PerformanceOption>
         <PerformanceOption>
@@ -232,11 +232,11 @@
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>SEQUENCES</Key>
+          <Key>VIEWS</Key>
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>VIEWS</Key>
+          <Key>SEQUENCES</Key>
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
@@ -361,11 +361,11 @@
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>VIEWS</Key>
+          <Key>SEQUENCES</Key>
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>SEQUENCES</Key>
+          <Key>VIEWS</Key>
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
@@ -393,7 +393,7 @@
     <SavePassword>true</SavePassword>
     <Password>gp2PpDWuf02JaadptPN96zAnAttR0XUlts/jAtPxGNI=</Password>
     <RestoreWork>false</RestoreWork>
-    <LastConnectionDate>2017-04-28T15:23:13</LastConnectionDate>
+    <LastConnectionDate>2017-05-02T17:16:51</LastConnectionDate>
     <ConnectionType>Default</ConnectionType>
     <ConnectionMode>Default</ConnectionMode>
     <Sid>xe</Sid>
@@ -490,11 +490,11 @@
           <Value>false</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>VIEWS</Key>
+          <Key>SEQUENCES</Key>
           <Value>true</Value>
         </PerformanceOption>
         <PerformanceOption>
-          <Key>SEQUENCES</Key>
+          <Key>VIEWS</Key>
           <Value>true</Value>
         </PerformanceOption>
         <PerformanceOption>

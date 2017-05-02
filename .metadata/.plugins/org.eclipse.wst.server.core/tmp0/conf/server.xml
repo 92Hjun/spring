@@ -149,10 +149,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="C:\spring_project\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\spring_project\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-final" path="/jhta" reloadable="true" source="org.eclipse.jst.jee.server:spring-final">
-	<!-- 반드시 context.xml 파일 이름으로 사용하여야 한다. -->
-	<Resource auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="150" maxIdle="10" maxWait="10000" name="jdbc/myoracle" password="zxcv1234" type="javax.sql.DataSource" url="jdbc:oracle:thin:@192.168.10.97:1521:xe" username="hr"/>
-</Context></Host>
+      <Context docBase="C:\spring_project\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\spring_project\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\spring-angular" path="/jhta" reloadable="true" source="org.eclipse.jst.jee.server:spring-angular"/></Host>
     </Engine>
   </Service>
 </Server>
